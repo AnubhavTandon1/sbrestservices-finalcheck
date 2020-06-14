@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:context="http://www.springframework.org/schema/context" 
+ xmlns:p="http://www.springframework.org/schema/p" 
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean class="com.cognizant.truyum.model.Movies" id="infinitywars">
+<property value="1" name="id"/>
+<property value="Infinity Wars" name="title"/>
+<property value="199" name="boxOffice"/>
+<property value="true" name="active"/>
+<property value="18/02/2018" name="dateOfLaunch"/>
+<property name="genre">
+<list>
+<value>Action</value>
+<value>Thriller</value>
+<value>Adventure</value>
+</list>
+</property>
+</bean><bean class="com.cognizant.truyum.model.Movies" id="endgame">
+<property value="2" name="id"/>
+<property value="End Game" name="title"/>
+<property value="280" name="boxOffice"/>
+<property value="true" name="active"/>
+<property value="25/08/2019" name="dateOfLaunch"/>
+<property name="genre">
+<list>
+<value>Action</value>
+<value>Thriller</value>
+<value>Adventure</value>
+</list>
+</property>
+</bean><bean class="com.cognizant.truyum.model.Movies" id="johnwick">
+<property value="3" name="id"/>
+<property value="John Wick" name="title"/>
+<property value="100" name="boxOffice"/>
+<property value="false" name="active"/>
+<property value="18/09/2017" name="dateOfLaunch"/>
+<property name="genre">
+<list>
+<value>Action</value>
+<value>Thriller</value>
+<value>Adventure</value>
+</list>
+</property>
+</bean>
+<bean class="com.cognizant.truyum.model.Movies" id="fast">
+<property value="4" name="id"/>
+<property value="Fast and Furious" name="title"/>
+<property value="110" name="boxOffice"/>
+<property value="false" name="active"/>
+<property value="28/02/2014" name="dateOfLaunch"/>
+<property name="genre">
+<list>
+<value>Action</value>
+<value>Thriller</value>
+<value>Adventure</value>
+</list>
+</property>
+</bean>
+<bean class="java.util.ArrayList" id="movieList">
+<constructor-arg>
+<list>
+<ref bean="infinitywars"/>
+<ref bean="endgame"/>
+<ref bean="johnwick"/>
+<ref bean="fast"/>
+</list>
+</constructor-arg>
+</bean>
+</beans>
